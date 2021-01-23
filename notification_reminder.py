@@ -59,7 +59,7 @@ users = Table('users', metadata,
 
 # create sqlalchemy engine
 engine = create_engine(
-    'mysql+pymysql://morthos:afcbdfag38@projectgardenapp.czycyhu4wgvm.us-west-2.rds.amazonaws.com:3306/garden_app')
+    'mysql+pymysql://database')
 
 # init connection
 connection = engine.connect()
@@ -125,15 +125,15 @@ def sendEmail(plantName1, sensorID, currentplantstatus):
     # me == the sender's email address
     # you == the recipient's email address
     msg['Subject'] = 'It is time to water %s' % plantName1
-    msg['From'] = "water.reminder.garden@gmail.com"
+    msg['From'] = ""
     msg['To'] = email1
 
     # Send the message via our own SMTP server, but don't include the
     # envelope header.
     s = smtplib.SMTP('smtp.gmail.com', 587)
     s.starttls()
-    s.login('water.reminder.garden@gmail.com', 'WaterSecretGarden')
-    s.sendmail("water.reminder.garden@gmail.com", email1, msg.as_string())
+    s.login('')
+    s.sendmail("", email1, msg.as_string())
     s.quit()
 
 
