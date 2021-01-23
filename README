@@ -1,0 +1,7 @@
+This application will launch the moisture sensor updater. 
+
+It uses SQL Alchemy, so adjust the DB connection details.
+
+Install dependencies listed in insert.py.
+
+Run with 'python insert.py'.
