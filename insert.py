@@ -32,7 +32,7 @@ sensorInfo = Table('sensorInfo', metadata,
 serial = serial.Serial('/dev/ttyACM0', 9600)
 
 #create sqlalchemy engine
-engine = create_engine('mysql+pymysql://morthos:afcbdfag38@projectgardenapp.czycyhu4wgvm.us-west-2.rds.amazonaws.com:3306/garden_app')
+engine = create_engine('mysql+pymysql://databaseinfo here')
 
 #init connection
 connection = engine.connect()
